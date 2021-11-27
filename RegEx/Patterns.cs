@@ -7,10 +7,10 @@ namespace RegEx
 {
     public class Patterns
     {
-        public static void FirstName(string name)
+        public static void LastName(string name)
         {
-            string FirstName = "^[A-Za-z]\\w{1,10}$$";
-            Regex regex = new Regex(FirstName);
+            string LastName = "^[A-Za-z]\\w{1,10}$$";
+            Regex regex = new Regex(LastName);
             if (regex.IsMatch(name))
             {
                 Console.WriteLine(name + " is valid name");
