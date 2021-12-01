@@ -9,7 +9,7 @@ namespace RegEx
     {
         public static void LastName(string name)
         {
-            string LastName = "^[A-Za-z]\\w{1,10}$$";
+            string LastName = "^[A-Z][a-zA-Z]{1,10}$";
             Regex regex = new Regex(LastName);
             if (regex.IsMatch(name))
             {
