@@ -9,7 +9,7 @@ namespace RegEx
     {
         public static void FirstName(string name1)
         {
-            string FirstName = "^[A-Za-z]\\w{1,10}$$";
+            string FirstName = "^[A-Z][a-zA-Z]{1,10}$";
             Regex regex = new Regex(FirstName);
             if (regex.IsMatch(name1))
             {
@@ -23,7 +23,7 @@ namespace RegEx
 
         public static void LastName(string name2)
         {
-            string LastName = "^[A-Za-z]\\w{1,10}$$";
+            string LastName = "^[A-Z][a-zA-Z]{1,10}$";
             Regex regex = new Regex(LastName);
             if (regex.IsMatch(name2))
             {
