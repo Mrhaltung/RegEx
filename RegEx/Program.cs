@@ -6,6 +6,7 @@ namespace RegEx
     {
         static void Main(string[] args)
         {
+            // Regular Expression Program
             Console.WriteLine("Welcome to Regular Expression Program \n");
 
             Patterns p = new Patterns("msg");
