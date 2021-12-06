@@ -134,5 +134,74 @@ namespace RegEx
                 throw new CustomException(CustomException.ExceptionType.Argument_Null_Exception, "invalid");
             }
         }
+
+        public bool ValidateFirstName(string firstName)
+        {
+            try
+            {
+                return Patterns.Equals(firstName, firstName);
+            }
+            catch (CustomException)
+            {
+                throw new CustomException(CustomException.ExceptionType.Argument_Null_Exception, "Invalid First Name,Name should be first letter capital");
+            }
+        }
+        public bool ValidateLastName(string lastName)
+        {
+            try
+            {
+                return Patterns.Equals(lastName, lastName);
+            }
+            catch (CustomException)
+            {
+                throw new CustomException(CustomException.ExceptionType.Argument_Null_Exception, "Invalid First Name,Name should be first letter capital");
+            }
+        }
+        public bool ValidateEmail(string email)
+        {
+            try
+            {
+                return Patterns.Equals(email, email);
+            }
+            catch (CustomException)
+            {
+                throw new CustomException(CustomException.ExceptionType.Argument_Null_Exception, "Invalid First Name,Name should be first letter capital");
+            }
+        }
+        public bool ValidateMobile(string phoneNumber)
+        {
+            try
+            {
+                return Patterns.Equals(phoneNumber, phoneNumber);
+            }
+            catch (CustomException)
+            {
+                throw new CustomException(CustomException.ExceptionType.Argument_Null_Exception, "Invalid First Name,Name should be first letter capital");
+            }
+        }
+        public bool ValidatePassword(string password)
+        {
+            try
+            {
+                return Patterns.Equals(password, password);
+            }
+            catch (CustomException)
+            {
+                throw new CustomException(CustomException.ExceptionType.Argument_Null_Exception, "Invalid First Name,Name should be first letter capital");
+            }
+        }
+        public static bool ValidateEmailList(string email)
+        {
+            try
+            {
+                String emailPattern = "^([A-Za-z\\d-_\\+]+)(\\.[A-Za-z\\d-_]+)?@([a-zA-Z\\d]+)\\.([a-zA-Z]{2,4})(\\.[A-Za-z]{2,4})?$";
+                Regex obj = new Regex(emailPattern);
+                return obj.IsMatch(email);
+            }
+            catch (CustomException)
+            {
+                throw new CustomException(CustomException.ExceptionType.Argument_Null_Exception, "Invalid Email.Email should be in format");
+            }
+        }
     }
 }
